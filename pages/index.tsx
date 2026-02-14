@@ -7,13 +7,22 @@ type MarketData = {
   funds: number;
 };
 
+type TradeResult = {
+  success: boolean;
+  outcome: string;
+  shares: number;
+  cost?: number;
+  revenue?: number;
+  fund: number;
+};
+
 export default function Home() {
   const [marketData, setMarketData] = useState<MarketData | null>(null);
   const [outcome, setOutcome] = useState('');
   const [shares, setShares] = useState('');
   const [tradeType, setTradeType] = useState('buy');
   const [funds, setFunds] = useState('');
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<TradeResult | null>(null);
   const [error, setError] = useState('');
 
   useEffect(() => {

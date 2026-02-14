@@ -26,6 +26,14 @@ export default function handler(
     const sharesNum = parseInt(shares);
     const fundsNum = parseFloat(funds);
 
+    if (isNaN(sharesNum) || sharesNum <= 0) {
+      return res.status(400).json({ success: false, error: 'Invalid shares value' });
+    }
+
+    if (isNaN(fundsNum) || fundsNum <= 0) {
+      return res.status(400).json({ success: false, error: 'Invalid funds value' });
+    }
+
     if (trade_type === 'buy') {
       const cost = market.buyShares(outcome, sharesNum, fundsNum);
       return res.status(200).json({

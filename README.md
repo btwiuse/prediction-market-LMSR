@@ -1,4 +1,4 @@
-# LSMR Prediction Market
+# LMSR Prediction Market
 This is a simple web application that demonstrates the use of Hanson's Logarithmic Market Scoring Rule (LMSR) for a prediction market. Users can make trades on predictions, betting on how likely an event is to occur. Each prediction is an individual market with a market maker system modeled on Robin Hanson's logarithmic market scoring rules.
 
 ## Some finance theory before we move ahead!
